@@ -1,38 +1,225 @@
-.App {
+/* src/styles/App.css */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 0.375rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.primary-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.logout-button {
+  width: 100%;
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #b91c1c;
+}
+
+.link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.link a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.profile-info {
+  margin-bottom: 1rem;
+}
+
+.profile-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+}
+
+.profile-details {
+  margin-bottom: 1rem;
+}
+
+.profile-details p {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.profile-details p span {
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  color: #4b5563;
+}
+
+.avatar-container {
+  margin: 20px auto;
+}
+.profile-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.logout-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+/* src/styles/FilePondCustom.css */
+.filepond--root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.filepond--panel-root {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.filepond--drop-label {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.filepond--label-action {
+  text-decoration: underline;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.filepond--label-action:hover {
+  color: #0056b3;
+}
+
+.filepond--file {
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+}
+
+.filepond--file-status {
+  color: #495057;
+}
+
+.filepond--file-action-button {
+  background-color: #0d6efd;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.filepond--file-action-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Décale le contenu quand la sidebar est ouverte */
+.content {
+margin-left: 280px; /* largeur du sidebar */
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* gris clair pour contraste */
+ 
+}
+
+/* Quand la sidebar est réduite */
+.sidebar.closed ~ .content {
+  margin-left: 70px;
+}
+
+.form-container {
+  max-width: 1300px;
+  margin: 0 auto; /* centrer le contenu */
+}
+
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.devis-details-card {
+    max-width: 900px;
+    margin: 0 auto;
 }
